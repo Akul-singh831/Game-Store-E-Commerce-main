@@ -1,1 +1,5 @@
 node_modules/
+
+# ignore build outputs and large files (prevent GitHub 50MB limit)
+build/
+*.zip
