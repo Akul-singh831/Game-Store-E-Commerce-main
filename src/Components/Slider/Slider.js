@@ -12,22 +12,19 @@ const Slider = props => {
     selectedGame,
     setSelectedGame,
     allGames,
-    incrementCarousel,
-    decrementCarousel,
     carouselState,
     setCarouselState,
     hoverState,
     handleHover
   } = props;
 
-  const [footageIndex, setFootageIndex] = useState(0);
   const slideRef = React.createRef();
   const location = useLocation();
 
   useEffect(() => {
     const selectedGameIndex = allGames.findIndex(game => "/react-ecommerce-store/games/" + game.surname === location.pathname);
     setSelectedGame(allGames[selectedGameIndex]);
-  }, []);
+  }, [allGames, location.pathname, setSelectedGame]);
 
   const properties = {
     duration: 6000,

@@ -1,5 +1,5 @@
 import styles from './Cart.module.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { ReactComponent as Right } from "../../assets/image/arrowRight.svg";
 import { ReactComponent as Cross } from "../../assets/image/cross.svg";
 import { motion } from "framer-motion";
@@ -9,26 +9,17 @@ const Cart = props => {
     const {
         cartAmount,
         cart,
-        handleOpenCart,
-        handleCloseCart,
-        cartDisplayed,
         handleHover,
         hoverState,
         clearCart,
         handleRemoveFromCart,
         openGamePage
     } = props;
-
-    const [total, setTotal] = useState(0);
     let newTotal = 0;
     cart.forEach((item, i) => {
         let priceAsNumber = parseFloat(item.price);
         let currentTotal = parseFloat(newTotal);
         newTotal = (priceAsNumber + currentTotal).toFixed(2);
-
-        if (i === cart.length) {
-            setTotal(newTotal);
-        }
     })
 
     const variants = {

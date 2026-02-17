@@ -1,8 +1,6 @@
 import styles from './Grid.module.css';
 import React, { useEffect } from 'react';
 import Card from '../Card/Card';
-import AnimatedPage from '../../pages/AnimatedPage/AnimatedPage';
-import { v4 as uuidv4 } from 'uuid';
 
 const Grid = props => {
     const {
@@ -52,6 +50,7 @@ const Grid = props => {
                     hoverState={hoverState}
                   />
                 }
+                return null;
             }) : shownGames.map((game, i) => {
                 return <Card 
                          game={game} 
@@ -74,6 +73,7 @@ const Grid = props => {
                              hoverState={hoverState}
                            />
                 }
+                return null;
             })}
           </div>
     </>

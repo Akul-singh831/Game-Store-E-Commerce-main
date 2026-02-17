@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './NavBar.module.css';
 import { ReactComponent as Logo } from "../../assets/image/logo.svg";
 import { ReactComponent as Browse } from "../../assets/image/browse.svg";
@@ -15,14 +15,11 @@ const NavBar = props => {
         handleBrowse,
         browsing,
         landingPage,
-        cart,
         cartAmount,
         search,
-        searching,
         handleSearch,
         handleSearchSubmit,
-        handleOpenCart,
-        handleCloseCart
+        handleOpenCart
     } = props;
     
     const variants = {

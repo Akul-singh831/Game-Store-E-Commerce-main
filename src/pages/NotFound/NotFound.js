@@ -41,7 +41,7 @@ const progress = {
 
 useEffect(() => {
   setTimeout(handleBrowse, 6800);
-}, [])
+}, [handleBrowse])
 
     return (
       <div className={styles.notFound}>
